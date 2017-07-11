@@ -48,7 +48,12 @@ namespace MethodsPractice
             //int total = sumIt(sumArray, numAdd);
             //Console.WriteLine(total);   
 
-            Console.WriteLine(doubleIt(7));       
+            //Console.WriteLine(doubleIt(7));
+
+            //Console.WriteLine(sumDigits(123));
+
+            int[] maxArray = { 23, 56, 82000, 13, 96, 10000 };
+            Console.WriteLine(findMax(maxArray, 6));
         }
 
         //public static int ParseCheck(string randomStr)
@@ -128,13 +133,48 @@ namespace MethodsPractice
         //    return sum;
         //}
 
-        public static int doubleIt(int num1)
-        {
-            int total = 0;
-            total = num1 * 2;
-            return total;
-        }
+        //public static int doubleIt(int num1)
+        //{
+        //    int total = 0;
+        //    total = num1 * 2;
+        //    return total;
+        //}
 
+        //public static int sumDigits(int num1)
+        //{
+        //    String num1Str = num1.ToString();
+        //    char[] arr = num1Str.ToCharArray();
+        //    int[] numArray = new int[3];
+        //    string[] numStr1 = new string[3];
+
+        //    int sum = 0;
+        //    for (int i = 0; i < arr.Length; i++)
+        //    {
+        //        numStr1[i] = arr[i].ToString();
+        //        numArray[i] = int.Parse(numStr1[i]);
+        //        sum += numArray[i];
+
+        //    }
+            
+        //    return sum;
+        //}
+
+        public static int findMax(int[] arr, int size)
+        {
+            int temp = 0;
+            for(int i = 0; i < size; i++)
+            {
+                   if (arr[i] > temp)
+                    {
+                        temp = arr[i];
+                    }
+                    
+                }
+                
+                return temp;
+            }
+            
+        
 
     }
 }
